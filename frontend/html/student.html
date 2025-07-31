@@ -1,0 +1,164 @@
+<div class="row ">
+  <div class="col-md-5 bg-light p-3 list-container">
+    <h3>Manage-Students</h3>
+
+    <!-- Switch tabs -->
+    <ul class="nav nav-pills" id="studentTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="add-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#add"
+          type="button"
+          role="tab"
+        >
+          Add
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="update-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#update"
+          type="button"
+          role="tab"
+        >
+          Update
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link "
+          id="delete-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#delete"
+          type="button"
+          role="tab"
+        >
+          Delete
+        </button>
+      </li>
+    </ul>
+
+    <!-- Tab Contents -->
+    <div class="tab-content mt-3" id="studentTabContent">
+      <!-- ADD FORM -->
+      <div class="tab-pane fade show active" id="add" role="tabpanel">
+        <form id="add-form">
+          <div class="mb-1">
+            <label for="add-name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="add-name" />
+          </div>
+          <div class="mb-1">
+            <label for="add-age" class="form-label">Age:</label>
+            <input type="number" class="form-control" id="add-age" />
+          </div>
+          <div class="mb-1">
+            <label for="add-email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="add-email" />
+          </div>
+          <div class="mb-1">
+            <label for="add-mobile" class="form-label">Mobile:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="add-mobile"
+              pattern="^[6-9]\d{9}$"
+              required
+            />
+          </div>
+          <div class="mb-1">
+            <label for="add-address" class="form-label">Address:</label>
+            <input type="text" class="form-control" id="add-address" />
+          </div>
+          <button type="button" class="btn btn-success" id="add-student">
+            Add Student
+          </button>
+        </form>
+      </div>
+
+      <!-- UPDATE FORM -->
+      <div class="tab-pane fade" id="update" role="tabpanel">
+        <form id="update-form">
+          <div class="mb-1">
+            <label for="update-id" class="form-label">ID:</label>
+            <input type="text" class="form-control" id="update-id" />
+          </div>
+          <div class="mb-1">
+            <label for="update-name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="update-name" />
+          </div>
+          <div class="mb-1">
+            <label for="update-age" class="form-label">Age:</label>
+            <input type="number" class="form-control" id="update-age" />
+          </div>
+          <div class="mb-1">
+            <label for="update-email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="update-email" />
+          </div>
+          <div class="mb-1">
+            <label for="update-mobile" class="form-label">Mobile:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="update-mobile"
+              pattern="^[6-9]\d{9}$"
+              required
+            />
+          </div>
+          <div class="mb-1">
+            <label for="update-address" class="form-label">Address:</label>
+            <input type="text" class="form-control" id="update-address" />
+          </div>
+          <button
+            type="button"
+            class="btn btn-success"
+            id="update-student"
+          >
+            Update
+          </button>                                        
+        </form>
+      </div>
+
+      <!-- DELETE FORM -->
+      <div class="tab-pane fade" id="delete" role="tabpanel">
+        <form id="delete-form">
+          <div class="mb-3">
+            <label for="delete-id" class="form-label">ID:</label>
+            <input type="text" class="form-control" id="delete-id" />
+          </div>
+          <button
+            type="button"
+            class="btn btn-danger"
+            id="delete-student"
+          >
+            Delete
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Students List column -->
+  <div class="col-md-7" id="list-column">
+    <div class="container view-students bg-light p-3">
+      <h3>Students-List</h3>
+      <i class="fa-solid fa-arrows-rotate"></i>
+      <table id="student-table">
+        <thead id="shead">
+          <th>Id</th>
+          <th>name</th>
+           <th>cardId</th>
+          <th>age</th>
+          <th>email</th>
+          <th>mob</th>
+          <th>address</th>
+         
+        </thead>
+        <tbody id="rows-st"></tbody>
+      </table>
+    </div>
+  </div>
+</div>

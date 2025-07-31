@@ -1,0 +1,59 @@
+<div class="container mt-5">
+
+
+
+  <h2 class="mb-4 text-center text-primary fw-bold" id="welcome">📚 Welcome, Student</h2>
+  <div class="row g-4">
+    <!-- Books Borrowed -->
+    <div class="col-md-4">
+      <div class="card border-start border-success border-4 shadow-sm h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Books Borrowed</h5>
+          <p class="highlight text-success mb-0" id="borrowed-count">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Fine -->
+    <div class="col-md-4">
+      <div class="card border-start border-danger border-4 shadow-sm h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Total Fine</h5>
+          <p class="highlight text-danger mb-0">₹<span id="fine-amount">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overdue Books -->
+    <div class="col-md-4">
+      <div class="card border-start border-warning border-4 shadow-sm h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Overdue Books</h5>
+          <p class="highlight text-warning mb-0" id="overdue-count">0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Borrowed Books Table -->
+  <div class="mt-5 bg-white p-4 shadow rounded">
+    <h4 id="myBookHeading" class="mb-3 text-primary fw-semibold">📖 My Borrowed Books</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover align-middle" id="myBooksTable">
+        <thead class="table-primary text-center" id="myBooksHead">
+          <tr>
+            <th>Book</th>
+            <th>Issued On</th>
+            <th>Due Date</th>
+            <th>Fine</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="my-books">
+          <!-- JS will populate rows here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

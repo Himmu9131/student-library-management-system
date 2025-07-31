@@ -1,0 +1,89 @@
+<div class="row ">
+  <div class="col-md-2 bg-light p-3 list-container mb-2">
+    <h3>Manage-Transactions</h3>
+
+    <!-- Switch tabs -->
+    <ul class="nav nav-tabs" id="transactionTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="delete-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#delete"
+          type="button"
+          role="tab"
+        >
+          Delete
+        </button>
+      </li>
+    </ul>
+
+    <!-- Tab Contents -->
+    <div class="tab-content mt-4" id="transactionTabContent">
+      <!-- ADD FORM -->
+      <!-- <div class="tab-pane fade show active" id="add" role="tabpanel">
+        <form id="add-form">
+          <div class="mb-1">
+            <label for="fine" class="form-label">Fine:</label>
+            <input type="text" class="form-control" id="fine" />
+          </div>
+          <div class="mb-1">
+            <label for="issued" class="form-label">Issued:</label>
+            <input type="number" class="form-control" id="issued" />
+          </div>
+          <div class="mb-1">
+            <label for="status" class="form-label">Status:</label>
+            <input type="email" class="form-control" id="status" />
+          </div>
+          <div class="mb-1">
+            <label for="bId" class="form-label">bookId:</label>
+            <input type="text" class="form-control" id="bId" />
+          </div>
+          <div class="mb-1">
+            <label for="cId" class="form-label">CardId:</label>
+            <input type="text" class="form-control" id="cId" />
+          </div>
+          <button type="button" class="btn btn-success" onclick="addTransaction()">
+            Add Transaction
+          </button>
+        </form>
+      </div> -->
+       <div class="tab-pane fade show active" id="delete" role="tabpanel">
+        <form id="delete-form">
+          <div class="mb-3">
+            <label for="delete-transaction-id" class="form-label">ID:</label>
+            <input type="text" class="form-control" id="delete-transaction-id" placeholder="enter-transaction-id" />
+          </div>
+          <button
+            type="button"
+            class="btn btn-danger"
+            id="delete-transaction">
+            delete
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <!-- Transactions column List column -->
+  <div class="col-md-10" id="list-column">
+    <div class="container view-transactions bg-light p-3">
+      <h3>Transactions-List</h3>
+      <i class="fa-solid fa-arrows-rotate"></i>
+      <table id="transaction-table">
+        <thead id="thead">
+          <th>Id</th>
+          <th>book name</th>
+          <th>st.name</th>
+          <th>cardId</th>
+          <th>fine</th>
+          <th>operation</th>
+          <th>status</th>
+          <th>transaction date</th>
+          
+        </thead>
+        <tbody id="rows-trt"></tbody>
+      </table>
+    </div>
+  </div>
+</div>

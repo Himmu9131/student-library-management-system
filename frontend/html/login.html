@@ -1,0 +1,32 @@
+<!-- Wrap both forms in separate sections -->
+<div id="login-form-section" class="overlay">
+  <div class="login-card">
+    <h2 class="text-center">📚 Welcome to Library</h2>
+    <form id="loginForm" class="ms-auto me-auto">
+      <input type="email" id="email" placeholder="Enter your email:" required class="form-control mb-3" />
+      <input type="password" id="password" placeholder="Enter your Password:" required class="form-control mb-3" />
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+    <div class="login-links">
+      <a href="#" id="forgot-link">Forgot Password?</a>
+    </div>
+  </div>
+</div>
+
+<div id="forgot-form-section" class="overlay " style="display: none">
+  <div class="login-card">
+    <h2 class="text-center">🔑 Reset Password</h2>
+    <form id="forgot-form" class="ms-auto me-auto">
+      <input
+        type="email"
+        id="forgot-email"
+        placeholder="Enter your email"
+        required
+      />
+      <button class="btn-secondary" type="button" id="reset-link-send">Send Reset Link</button>
+    </form>
+    <button id="back-to-login" class="btn btn-secondary mt-2 text-center but">
+       Back to Login
+    </button>
+  </div>
+</div>

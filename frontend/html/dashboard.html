@@ -1,0 +1,74 @@
+<div class="container my-4">
+  <!-- Banner Image -->
+  <div class="mb-4 text-center">
+    <!-- <img src="img/pexels-minan1398-694740.jpg" class="img-fluid rounded shadow " style="height: 100px;" alt="Library Banner"> -->
+  </div>
+
+  <!-- Dashboard Title -->
+  <h2 class="text-center mb-4">Library Dashboard</h2>
+
+  <!-- Summary Cards -->
+
+  <div class="row text-white mb-4">
+    <div class="col-md-3">
+      <div class="card border-start border-primary border-4 shadow-sm h-100 text-center text-primary">
+        <div class="card-body">
+          <h5 class="card-title">Total Books Available</h5>
+          <h2 id="totalBooks">0</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-start border-success border-4 shadow-sm h-100 text-center text-success">
+        <div class="card-body">
+          <h5 class="card-title">Books Borrowed</h5>
+          <h2 id="booksBorrowed">0</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="card border-start border-warning border-4 shadow-sm h-100 text-center text-warning">
+        <div class="card-body">
+          <h5 class="card-title">Total Borrowers</h5>
+          <h2 id="totalBorrowers">0</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-start border-danger border-4 shadow-sm h-100 text-center text-danger">
+        <div class="card-body">
+          <h5 class="card-title">Overdue Books</h5>
+          <h2 id="overdueBooks">0</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popular Books and Recent Activity -->
+  <div class="row p-5">
+    <div class="col-md-6">
+      <div class="card shadow rounded-4">
+        <div class="card-header bg-light">
+          <h5 class="mb-0">📚 Popular Books</h5>
+        </div>
+        <div class="card-body">
+          <ol class="list-group list-group-flush popList" id="popularBooks">
+            <!-- Popular books will be dynamically added here -->
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mt-4 mt-md-0">
+      <div class="card shadow rounded-4">
+        <div class="card-header bg-light">
+          <h5 class="mb-0">📌 Recent Activity</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush popList" id="recentActivity">
+            <!-- Recent activity will be dynamically added here -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

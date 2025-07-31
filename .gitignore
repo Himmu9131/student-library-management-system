@@ -1,0 +1,35 @@
+# Java / Spring Boot
+/target/
+*.log
+*.class
+*.jar
+*.war
+*.iml
+*.db
+*.h2.db
+*.swp
+*.swo
+
+# IntelliJ / VS Code / Eclipse
+.idea/
+.vscode/
+*.iws
+*.ipr
+*.bak
+*.tmp
+*.DS_Store
+
+# Node (if any)
+node_modules/
+
+# Environment files
+.env
+*.env
+
+# OS generated
+Thumbs.db
+.DS_Store
+
+# Frontend build (if using a build system later)
+dist/
+build/

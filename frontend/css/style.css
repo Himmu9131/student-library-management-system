@@ -1,0 +1,366 @@
+        *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+        #heading{
+          margin-top: 20px ;
+          text-align: center;
+          padding: 4px;
+          color: rgb(0, 0, 0);
+        }
+        .header{
+          background-color: rgb(38, 38, 122);
+          color: rgb(255, 255, 255);
+          width: 100%;
+        }
+        .custom-navbar {
+            background-color: 		#263a77; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          }
+         .custom-navbar .nav-link.active {
+            color: #FFD700 !important; 
+            border-radius: 4px solid blue;
+          }
+          .custom-navbar .nav-link,
+          .custom-navbar .navbar-brand {
+            color: white !important;
+          }
+          .custom-navbar .nav-link:hover {
+            color: #FFD700 !important;
+          }
+          .custom-navbar #logout-btn:hover {
+            color: #f23636d1 !important;
+          }
+               /* .nav-tab .nav-link.active {
+          background-color: #007bff;
+          color: #e3af14 !important;
+          border-radius: 4px;
+        }  */
+
+        .box{
+          border: 2px solid black;
+        }
+        #student-table {
+        width: 100%;  /* border-collapse: collapse; */
+          table-layout:auto;
+          border-radius: 10px;
+          overflow-y: auto;
+        
+        }
+        #student-table th,
+        #student-table td {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: center;
+          
+        }
+
+        /* #student-table th {
+          background-color: #f5f5f5;
+        } */
+
+        #student-table tbody tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+
+        #student-table td {
+          height: 50px;
+          overflow-y:var(100%);
+        }
+        #shead{
+          background-color: rgb(63, 133, 254);
+          color: white;
+        }
+        h3{
+          margin-top: 20px;
+        }
+        /* books */
+        #book-table {
+        width: 100%;  /* border-collapse: collapse; */
+          table-layout:auto;
+          border-radius: 10px;
+          overflow-y: auto;
+        
+        }
+        #book-table th,
+        #book-table td {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: center;
+          
+        }
+
+        /* #student-table th {
+          background-color: #f5f5f5;
+        } */
+
+        #book-table tbody tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+
+        #book-table td {
+          height: 50px;
+          overflow-y:var(100%);
+        }
+        #bhead{
+          background-color: rgb(63, 133, 254);
+          color: white;
+        }
+
+        /*login page */
+
+        body, html {
+              height: 100%;
+              margin: 0;
+              font-family: 'Segoe UI', sans-serif;
+            }
+        .login-bg {
+          background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+          min-height: 100vh;
+        }
+            .overlay {
+              background-color: rgba(0, 0, 0, 0.5);
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 1rem;
+            }
+
+            .login-card {
+              backdrop-filter: blur(15px);
+              background-color: rgba(255, 255, 255, 0.15);
+              border-radius: 15px;
+              padding: 30px;
+              color: white;
+              max-width: 400px;
+              width: 100%;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+              margin-left: 35%;
+              margin-top: 2%;
+            }
+
+            .login-card h2 {
+              font-weight: bold;
+              margin-bottom: 1.5rem;
+            }
+
+            .form-control {
+              background-color: rgb(255, 255, 255);
+              border: none;
+              color: rgb(7, 7, 7);
+            }
+
+            .form-control::placeholder {
+              color: #929292;
+            }
+
+            .form-control:focus {
+              background-color: rgb(252, 246, 246);
+              border: 2px solid #4618a7;
+              box-shadow: none;
+              color: rgb(25, 24, 24);
+            }
+
+            .btn-primary {
+              background-color: #ff6f61;
+              border: none;       
+            }
+
+            .btn-primary:hover {
+              background-color: #ff3e36;
+            }
+
+            .login-links {
+              margin-top: 1rem;
+              text-align: center;
+            }
+
+            .login-links a {
+              color: #fff;
+              text-decoration: underline;
+              margin: 0 0.5rem;
+            }
+            /* Author table */
+
+            /* books */
+        #author-table {
+        width: 100%;  /* border-collapse: collapse; */
+          table-layout:auto;
+          border-radius: 10px;
+          overflow-y: auto;
+        
+        }
+        #author-table th,
+        #author-table td {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: center;
+          
+        }
+        #author-table tbody tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+
+        #author-table td {
+          height: 50px;
+          overflow-y:var(100%);
+        }
+        #ahead{
+          background-color: rgb(63, 133, 254);
+          color: white;
+        }
+
+        /* Transaction list   */
+        #transaction-table {
+        width: 100%;  /* border-collapse: collapse; */
+          table-layout:auto;
+          border-radius: 10px;
+          overflow-y: auto;
+        
+        }
+        #transaction-table th,
+        #transaction-table td {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: center;
+          
+        }
+        #transaction-table tbody tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+
+        #transaction-table td {
+          height: 50px;
+          overflow-y:var(100%);
+        }
+        #thead{
+          background-color: rgb(63, 133, 254);
+          color: white;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 16px;
+          }
+
+          .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+          }
+
+          .table thead {
+            transition: background-color 0.3s;
+          }
+
+          .table tbody tr:hover {
+            background-color: #f1f5ff;
+            transition: background-color 0.3s ease-in-out;
+          }
+
+          .highlight {
+            font-size: 1.8rem;
+            font-weight: 600;
+          }
+
+          .card-title {
+            color: #6c757d;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+          }
+
+          .table th,
+          .table td {
+            vertical-align: middle;
+          }
+
+        popList {
+          list-style-type: none;
+          padding: 10px;
+        }
+        #popularBooks li,
+        #recentActivity li {
+          padding-left: 8px;
+          margin: 5px 0;
+          background-color: #f1f1f1;
+          border-radius: 5px;
+          color: #333;
+          font-size: 18px;
+        list-style-type:none;
+        }
+
+         /* background-color: #007bff; */
+        /* .nav-link.active {
+         
+          color: #e3af14 !important;
+          border-radius: 4px;
+        }  */
+
+       
+
+
+        /* #login-form-section,
+        #forgot-form-section {
+          transition: opacity 1s linear, transform 1s ease;
+        }
+
+        .hidden {
+          display: none;
+          opacity: 0;
+        }
+
+        .show {
+          display: block;
+          opacity: 1;
+        } */
+
+
+        /* login card */
+
+        .overlay {
+          min-height: 75vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* background: #f8f9fa; Optional: light background */
+        }
+
+        .login-card {
+          margin-top: 10;
+          justify-content: center;
+          align-items: center;
+          margin-left: 35%;
+          width: 100%;
+          max-width: 400px;
+          padding: 2rem;
+          /* background: white; */
+          border-radius: 1rem;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+.fade-wrapper {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-wrapper.fade-out {
+  opacity: 0;
+}
+
+  #reset-link-send :hover {
+    color: #f23636d1 !important;
+  }
+
+  #changePasswordSection {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+}

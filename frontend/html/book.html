@@ -1,0 +1,156 @@
+<div class="row align-items-start" style="min-height: 80vh;">
+  <!-- Left: Manage Books -->
+  <div class="col-md-6 bg-light p-3 border-end list-container" style="max-height: 80vh;">
+    <h3>Manage-Books</h3>
+    <!-- Tabs -->
+    <ul class="nav nav-pills" id="bookTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="add-tab" data-bs-toggle="tab" data-bs-target="#add" type="button" role="tab">Add</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="update-tab" data-bs-toggle="tab" data-bs-target="#update" type="button" role="tab">Update</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="delete-tab" data-bs-toggle="tab" data-bs-target="#delete" type="button" role="tab">Delete</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="issue-tab" data-bs-toggle="tab" data-bs-target="#issue" type="button" role="tab">Issue</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="return-tab" data-bs-toggle="tab" data-bs-target="#return" type="button" role="tab">Return</button>
+      </li>
+    </ul>
+
+    <!-- Tab Contents -->
+    <div class="tab-content mt-3" id="bookTabContent">
+
+      <!-- Add Form -->
+      <div class="tab-pane fade show active" id="add" role="tabpanel">
+        <form id="add-form">
+          <div class="mb-1">
+            <label for="book-name-add" class="form-label me-3">Name:</label>
+            <input type="text" class="form-control" id="book-name-add" />
+          </div>
+          <div class="mb-1">
+            <label for="book-genre-add" class="form-label me-3">Genre:</label>
+            <input type="text" class="form-control" id="book-genre-add" />
+          </div>
+          <div class="mb-1">
+            <label for="book-pages-add" class="form-label">Pages:</label>
+            <input type="text" class="form-control" id="book-pages-add" />
+          </div>
+          <div class="mb-1">
+            <label for="book-publisherName-add" class="form-label">Publisher Name:</label>
+            <input type="text" class="form-control" id="book-publisherName-add" />
+          </div>
+          <div class="mb-1">
+            <label for="a_id-add" class="form-label me-3">Author Id:</label>
+            <input type="text" class="form-control" id="a_id-add" />
+          </div>
+          <div class="mb-1">
+            <label for="copies-add" class="form-label me-3">Copies:</label>
+            <input type="text" class="form-control" id="copies-add" />
+          </div>
+          <button type="button" class="btn btn-success" id="add-book">Add</button>
+        </form>
+      </div>
+
+      <!-- Update Form -->
+      <div class="tab-pane fade" id="update" role="tabpanel">
+        <form id="update-form">
+          <div class="mb-1">
+            <label for="book-id-update" class="form-label me-3">ID:</label>
+            <input type="text" class="form-control" id="book-id-update" />
+          </div>
+          <div class="mb-1">
+            <label for="book-name-update" class="form-label me-3">Name:</label>
+            <input type="text" class="form-control" id="book-name-update" />
+          </div>
+          <div class="mb-1">
+            <label for="book-genre-update" class="form-label me-3">Genre:</label>
+            <input type="text" class="form-control" id="book-genre-update" />
+          </div>
+          <div class="mb-1">
+            <label for="book-pages-update" class="form-label me-3">Pages:</label>
+            <input type="text" class="form-control" id="book-pages-update" />
+          </div>
+          <div class="mb-1">
+            <label for="book-publisherName-update" class="form-label me-3">Publisher Name:</label>
+            <input type="text" class="form-control" id="book-publisherName-update" />
+          </div>
+          <div class="mb-1">
+            <label for="book-author-update" class="form-label me-3">Author_id:</label>
+            <input type="text" class="form-control" id="book-author-update" />
+          </div>
+          <div class="mb-1">
+            <label for="book-copies-update" class="form-label me-3">copies:</label>
+            <input type="text" class="form-control" id="book-copies-update" />
+          </div>
+          <button type="button" class="btn btn-success" id="update-book">Update</button>
+        </form>
+      </div>
+
+      <!-- Delete Form -->
+      <div class="tab-pane fade" id="delete" role="tabpanel">
+        <form id="delete-form">
+          <div class="mb-1">
+            <label for="book-id-delete" class="form-label me-3">ID:</label>
+            <input type="text" class="form-control" id="book-id-delete" />
+          </div>
+          <button type="button" class="btn btn-danger" id="delete-book">Delete</button>
+        </form>
+      </div>
+
+      <!-- Issue Form -->
+      <div class="tab-pane fade" id="issue" role="tabpanel">
+        <form id="issue-form">
+          <div class="mb-1">
+            <label for="book-id-i" class="form-label me-3">Book ID:</label>
+            <input type="text" class="form-control" id="book-id-i" />
+          </div>
+          <div class="mb-1">
+            <label for="card-id-i" class="form-label me-3">Card ID:</label>
+            <input type="text" class="form-control" id="card-id-i" />
+          </div>
+          <button type="button" class="btn btn-success" id="issue-book">Issue</button>
+        </form>
+      </div>
+
+      <!-- Return Form -->
+      <div class="tab-pane fade" id="return" role="tabpanel">
+        <form id="return-form">
+          <div class="mb-1">
+            <label for="book-id-r" class="form-label me-3">Book ID:</label>
+            <input type="text" class="form-control" id="book-id-r" />
+          </div>
+          <div class="mb-1">
+            <label for="card-id-r" class="form-label me-3">Card ID:</label>
+            <input type="text" class="form-control" id="card-id-r" />
+          </div>
+          <button type="button" class="btn btn-primary" id="return-book">Return</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Right: Books List -->
+  <div class="col-md-6" id="list-column">
+    <div class="container view-books bg-light p-3">
+      <h3>Books-List</h3>
+      <table id="book-table">
+        <thead id="bhead">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Pages</th>
+            <th>Publisher</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody id="rows-bt"></tbody>
+      </table>
+    </div>
+  </div>
+</div>

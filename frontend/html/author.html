@@ -1,0 +1,53 @@
+<!-- author.html -->
+<div class="row ">
+  <!-- Manage Authors -->
+  <div class="col-md-5 bg-light p-3 rounded shadow-sm list-container">
+    <h3>Manage Authors</h3>
+
+    <form id="author-form">
+      <div class="mb-3">
+        <label for="author-name" class="form-label">Author Name:</label>
+        <input type="text" class="form-control" id="author-name" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="author-country" class="form-label">Country:</label>
+        <input type="text" class="form-control" id="author-country" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="author-email" class="form-label">Email:</label>
+        <input type="text" class="form-control" id="author-email" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="author-rating" class="form-label">Rating:</label>
+        <input type="number" step="0.1" class="form-control" id="author-rating" required />
+      </div>
+
+      <button type="button" class="btn btn-success" id="addAuthor">
+        Add Author
+      </button>
+    </form>
+  </div>
+
+  <!-- Authors List -->
+  <div class="col-md-7" id="list-column">
+    <div class="container view-books bg-light p-3" style="width: 80%; height: 70vh; overflow-y: auto;">
+      <h3>Author List</h3>
+      <table id="author-table">
+        <thead id="ahead">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody id="rows-at">
+          <!-- Rows will be added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
