@@ -1,27 +1,27 @@
-
-
 version: "3.8"
 
 services:
   mysql-db:
-    build:
-      context: ./mysql-server
-    container_name: mysql-db
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: librarydb
-    ports:
-      - "3307:3306"
+      MYSQL_DATABASE: library
+    volumes:
+      - dbdata:/var/lib/mysql
 
   library-backend:
     build:
       context: ./backend
-    container_name: library-backend
-    depends_on:
-      - mysql-db
     ports:
       - "8080:8080"
+    depends_on:
+      - mysql-db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/librarydb
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/library
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
+
+volumes:
+  dbdata:
