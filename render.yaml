@@ -1,5 +1,3 @@
-dockerComposeFilePath: ./docker-compose.yml
-
 services:
   - type: web
     name: library-app
