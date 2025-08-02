@@ -1,29 +1,10 @@
 services:
-  - type: worker
-    name: mysql-db
+  - type: web
+    name: library-app
     env: docker
     repo: https://github.com/Himmu9131/student-library-management-system
-    dockerContext: ./mysql-server
+    dockerfilePath: ./docker-compose.yml
     plan: free
-    branch: main
-    autoDeploy: false
     region: oregon
-
-  - type: web
-    name: library-backend
-    env: docker
-    repo: https://github.com/Himmu9131/student-library-management-system
-    dockerContext: ./backend
-    plan: free
-    branch: main
-    autoDeploy: true
-    region: oregon
-
-  - type: web
-    name: library-frontend
-    env: static
-    repo: https://github.com/Himmu9131/student-library-management-system
-    staticPublishPath: frontend
-    buildCommand: ""
     branch: main
     autoDeploy: true
