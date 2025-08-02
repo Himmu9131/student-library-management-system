@@ -1,3 +1,5 @@
+
+
 version: "3.8"
 
 services:
@@ -14,6 +16,7 @@ services:
   library-backend:
     build:
       context: ./backend
+    container_name: library-backend
     depends_on:
       - mysql-db
     ports:
