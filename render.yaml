@@ -5,6 +5,7 @@ services:
     repo: https://github.com/Himmu9131/student-library-management-system
     dockerContext: ./mysql-server
     plan: free
+    branch: main
     autoDeploy: false
     region: oregon
 
@@ -14,6 +15,7 @@ services:
     repo: https://github.com/Himmu9131/student-library-management-system
     dockerContext: ./backend
     plan: free
+    branch: main
     autoDeploy: true
     region: oregon
 
