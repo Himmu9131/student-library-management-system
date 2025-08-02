@@ -11,7 +11,7 @@ services:
   - type: web
     name: library-backend
     env: docker
-    repo: https://github.com/Himmu9131/student-library-app-management-system
+    repo: https://github.com/Himmu9131/student-library-management-system
     dockerContext: ./backend
     plan: free
     autoDeploy: true
@@ -20,7 +20,7 @@ services:
   - type: web
     name: library-frontend
     env: static
-    repo: https://github.com/Himmu9131/student-library-app-management-system
+    repo: https://github.com/Himmu9131/student-library-management-system
     staticPublishPath: frontend
     buildCommand: ""
     branch: main
