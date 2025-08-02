@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: mysql-db
+    env: docker
+    repo: https://github.com/Himmu9131/student-library-management-system
+    dockerContext: ./mysql-server
+    plan: free
+    autoDeploy: false
+    region: oregon
+
+  - type: web
+    name: library-backend
+    env: docker
+    repo: https://github.com/Himmu9131/student-library-management-system
+    dockerContext: ./backend
+    plan: free
+    autoDeploy: true
+    region: oregon
+
+  - type: static
+    name: library-frontend
+    repo: https://github.com/Himmu9131/student-library-management-system
+    staticPublishPath: frontend
+    buildCommand: ""
+    branch: main
+    autoDeploy: true
+    region: oregon
