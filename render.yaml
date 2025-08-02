@@ -3,7 +3,7 @@ services:
     name: library-app
     env: docker
     repo: https://github.com/Himmu9131/student-library-management-system
-    dockerfilePath: ./docker-compose.yml
+    dockerComposeFilePath: ./docker-compose.yml
     plan: free
     region: oregon
     branch: main
