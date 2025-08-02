@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: student_library_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: student_library_management_system
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - student_net
+
+  backend:
+    build: ./backend
+    container_name: student_library_backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/student_library_management_system
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      - db
+    networks:
+      - student_net
+
+  frontend:
+    build: ./frontend
+    container_name: student_library_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - student_net
+
+volumes:
+  db_data:
+
+networks:
+  student_net:
