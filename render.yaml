@@ -1,3 +1,6 @@
+infrastructureVersion: 2
+
+
 services:
   - type: web
     name: library-app
