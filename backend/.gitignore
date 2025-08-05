@@ -41,7 +41,7 @@ mvnw
 mvnw.cmd
 
 # Application secrets (VERY important)
-# application.properties
+
 application.yml
 .env
 
