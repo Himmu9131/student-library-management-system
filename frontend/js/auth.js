@@ -137,6 +137,10 @@ async function login(event) {
   console.log(email+" "+password);
 
   try {
+
+        const payload = { username: email, password };
+console.log("Final payload sent to backend:", JSON.stringify(payload));
+
     const response = await fetch("https://student-library-management-system-g2wr.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
