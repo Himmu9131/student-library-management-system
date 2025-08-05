@@ -113,7 +113,7 @@ async function loadStudentDashboard() {
   const studentId = payload.sub; // Assuming 'sub' is student ID
   
   try {
-    const response = await fetch(`http://localhost:8080/dashboard/student`, {
+    const response = await fetch(`https://student-library-management-system-g2wr.onrender.com/dashboard/student`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

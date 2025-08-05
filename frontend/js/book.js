@@ -2,7 +2,7 @@
 //Books
 const findAllBooks = async () => {
   try {
-    const url = await fetch("http://localhost:8080/book/api/findAll", {
+    const url = await fetch("https://student-library-management-system-g2wr.onrender.com/book/api/findAll", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
@@ -67,7 +67,7 @@ const addBook = async () => {
   };
 
   try {
-    const resp = await fetch("http://localhost:8080/book/api/save", {
+    const resp = await fetch("https://student-library-management-system-g2wr.onrender.com/book/api/save", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const addBook = async () => {
 const deleteBook = async () => {
   const id = document.getElementById("book-id-delete").value.trim();
   try {
-    const resp = await fetch(`http://localhost:8080/book/api/delete/${id}`, {
+    const resp = await fetch(`https://student-library-management-system-g2wr.onrender.com/book/api/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -131,7 +131,7 @@ const updateBook = async () => {
   };
 
   try {
-    const resp = await fetch(`http://localhost:8080/book/api/update/${id}`, {
+    const resp = await fetch(`https://student-library-management-system-g2wr.onrender.com/book/api/update/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -168,7 +168,7 @@ const returnBook = async () => {
 
   try {
     const resp = await fetch(
-      `http://localhost:8080/transaction/api/return?bookId=${bookId}&cardId=${cardId}`,
+      `https://student-library-management-system-g2wr.onrender.com/transaction/api/return?bookId=${bookId}&cardId=${cardId}`,
       {
         method: "POST",
         headers: {
@@ -203,7 +203,7 @@ const issueBook = async () => {
 
   try {
     const resp = await fetch(
-      `http://localhost:8080/transaction/api/issue?bookId=${bookId}&cardId=${cardId}`,
+      `https://student-library-management-system-g2wr.onrender.com/transaction/api/issue?bookId=${bookId}&cardId=${cardId}`,
       {
         method: "POST",
         headers: {

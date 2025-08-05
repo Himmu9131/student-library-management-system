@@ -136,7 +136,7 @@ async function login(event) {
   const password = document.getElementById("password").value;
 
   try {
-    const response = await fetch("http://localhost:8080/auth/login", {
+    const response = await fetch("https://student-library-management-system-g2wr.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
 
@@ -204,7 +204,7 @@ async function sendResetLink() {
            return;
         }
 
-  fetch("http://localhost:8080/auth/forgot-password", {
+  fetch("https://student-library-management-system-g2wr.onrender.com/auth/forgot-password", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),
@@ -245,7 +245,7 @@ function forgotPass(e) {
   const email = prompt("Enter your registered email:");
 
   if (email) {
-    fetch("http://localhost:8080/auth/forgot-password", {
+    fetch("https://student-library-management-system-g2wr.onrender.com/auth/forgot-password", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -2,7 +2,7 @@
 
 const findAllTransactions = async () => {
   try {
-    const url = await fetch("http://localhost:8080/transaction/api/findAll", {
+    const url = await fetch("https://student-library-management-system-g2wr.onrender.com/transaction/api/findAll", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
@@ -74,7 +74,7 @@ const addTransaction = async () => {
   };
 
   try {
-    const resp = await fetch("http://localhost:8080/transaction/api/save", {
+    const resp = await fetch("https://student-library-management-system-g2wr.onrender.com/transaction/api/save", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const addTransaction = async () => {
 };
 
 function booksBorrowed() {
-  fetch("http://localhost:8080/transaction/api/totalBorrowedBooks", {
+  fetch("https://student-library-management-system-g2wr.onrender.com/transaction/api/totalBorrowedBooks", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

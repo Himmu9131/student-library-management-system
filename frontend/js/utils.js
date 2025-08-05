@@ -35,7 +35,7 @@ const confirmPassword=document.getElementById("confirmPassword").value.trim();
   }
 
   try {
-    const response =  await fetch("http://localhost:8080/auth/update-password", {
+    const response =  await fetch("https://student-library-management-system-g2wr.onrender.com/auth/update-password", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

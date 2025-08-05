@@ -2,7 +2,7 @@
 
 const findAllStudents = async () => {
   try {
-    const response = await fetch("http://localhost:8080/student/api/findAll", {
+    const response = await fetch("https://student-library-management-system-g2wr.onrender.com/student/api/findAll", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -72,7 +72,7 @@ const addStudent = async () => {
   };
 
   try {
-    const resp = await fetch("http://localhost:8080/student/api/save", {
+    const resp = await fetch("https://student-library-management-system-g2wr.onrender.com/student/api/save", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const addStudent = async () => {
 const deleteStudent = async () => {
   const id = document.querySelector("#delete-form #delete-id").value.trim();
   try {
-    const resp = await fetch(`http://localhost:8080/student/api/delete/${id}`, {
+    const resp = await fetch(`https://student-library-management-system-g2wr.onrender.com/student/api/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -135,7 +135,7 @@ const updateStudent = async () => {
   };
 
   try {
-    const resp = await fetch(`http://localhost:8080/student/api/update/${id}`, {
+    const resp = await fetch(`https://student-library-management-system-g2wr.onrender.com/student/api/update/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

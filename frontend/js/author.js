@@ -1,7 +1,7 @@
 //Author
 const findAllAuthors = async () => {
   try {
-    const url = await fetch("http://localhost:8080/author/api/findAll", {
+    const url = await fetch("https://student-library-management-system-g2wr.onrender.com/author/api/findAll", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
@@ -54,7 +54,7 @@ const addAuthor = async () => {
   };
 
   try {
-    const resp = await fetch("http://localhost:8080/author/api/save", {
+    const resp = await fetch("https://student-library-management-system-g2wr.onrender.com/author/api/save", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

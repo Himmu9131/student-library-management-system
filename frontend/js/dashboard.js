@@ -1,7 +1,7 @@
   
 
 function totalBooks() {
-  fetch("http://localhost:8080/book/api/totalBooks", {
+  fetch("https://student-library-management-system-g2wr.onrender.com/book/api/totalBooks", {
     method: "GET", // Moved here
     headers: {
       "Content-Type": "application/json",
@@ -16,7 +16,7 @@ function totalBooks() {
 }
 
 function booksBorrowed() {
-  fetch("http://localhost:8080/book/api/borrowedBooks", {
+  fetch("https://student-library-management-system-g2wr.onrender.com/book/api/borrowedBooks", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -32,7 +32,7 @@ function booksBorrowed() {
 }
 
 function totalBorrowers() {
-  fetch("http://localhost:8080/transaction/api/totalBorrowers", {
+  fetch("https://student-library-management-system-g2wr.onrender.com/transaction/api/totalBorrowers", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -48,7 +48,7 @@ function totalBorrowers() {
 }
 
 function overdueTransactions() {
-  fetch("http://localhost:8080/transaction/api/overdueTransactions", {
+  fetch("https://student-library-management-system-g2wr.onrender.com/transaction/api/overdueTransactions", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -66,7 +66,7 @@ function overdueTransactions() {
 const popularBooks = async () => {
   try {
     const url = await fetch(
-      "http://localhost:8080/transaction/api/popular-books",
+      "https://student-library-management-system-g2wr.onrender.com/transaction/api/popular-books",
       {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -94,7 +94,7 @@ const popularBooks = async () => {
 
 async function loadRecentActivity() {
   try {
-    const response = await fetch("http://localhost:8080/transaction/api/recent-activity", {
+    const response = await fetch("https://student-library-management-system-g2wr.onrender.com/transaction/api/recent-activity", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
