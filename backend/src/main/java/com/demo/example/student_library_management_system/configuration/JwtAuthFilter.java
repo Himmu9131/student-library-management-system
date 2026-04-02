@@ -32,6 +32,14 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         final String jwt;
         final String username;
 
+        String path = request.getServletPath();
+
+        // 🚨 Skip JWT validation for login & registration
+        if (path.startsWith("/auth/")) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             System.out.println("❌ No Authorization header or Bearer token missing");
 

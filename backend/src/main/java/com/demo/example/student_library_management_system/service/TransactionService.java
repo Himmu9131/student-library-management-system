@@ -84,7 +84,7 @@ public class TransactionService {
         book.setCopies(book.getCopies() - 1); // ✅ reduce copy
         book.setIssuedToStudent(true);
         book.setCard(card);
-        bookRepository.save(book);
+
 
         Transaction transaction = Transaction.builder()
                 .book(book)
@@ -94,6 +94,11 @@ public class TransactionService {
                 .fine(0.0)
                 .transactionStatus(TransactionStatus.ISSUED)
                 .build();
+
+        List<Transaction> txnList=book.getTransactionsForBook();
+        txnList.add(transaction);
+        book.setTransactionsForBook(txnList);
+        bookRepository.save(book);
 
         return transactionRepository.save(transaction);
     }

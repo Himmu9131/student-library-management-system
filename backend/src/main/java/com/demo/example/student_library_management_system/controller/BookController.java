@@ -1,12 +1,10 @@
 package com.demo.example.student_library_management_system.controller;
 
 import com.demo.example.student_library_management_system.dto.BookRequestDto;
-import com.demo.example.student_library_management_system.dto.StudentRequestDto;
 import com.demo.example.student_library_management_system.model.Book;
-import com.demo.example.student_library_management_system.model.Student;
+import com.demo.example.student_library_management_system.repository.BookRepository;
+import com.demo.example.student_library_management_system.response.BookAuthorAndStudentsDto;
 import com.demo.example.student_library_management_system.service.BookService;
-import com.demo.example.student_library_management_system.service.StudentService;
-import com.demo.example.student_library_management_system.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +20,9 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
+
+    @Autowired
+    private BookRepository bookRepository;
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/save")
@@ -86,10 +87,17 @@ public class BookController {
            throw new NoSuchElementException();
         }
     }
-
-
-
-
+    @GetMapping("/bookAuthorAndStudents/{bookId}")
+    public ResponseEntity<BookAuthorAndStudentsDto> bookAuthorAndStudentsDtoResponseEntity(@PathVariable int bookId){
+         try {
+            return bookService.bookAuthorAndStudentsDtoResponseEntity(bookId);
+             
+         }
+         catch(Exception e){
+             throw new NoSuchElementException("None of the students borrowed the book with id");
+         }
+    
+    }
     }
 
 
