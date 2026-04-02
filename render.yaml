@@ -1,9 +1,0 @@
-infrastructureVersion: 2
-services:
-  - type: web
-    name: library-app
-    env: docker
-    repo: https://github.com/Himmu9131/student-library-management-system
-    dockerComposeFilePath: ./docker-compose.yml
-    branch: main
-    autoDeploy: true
